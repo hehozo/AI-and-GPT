@@ -11,7 +11,7 @@ messages = [
 messages.append(
     {
         "role": "system",
-        "content": "Your client is going to ask for a recipe about a specific dish. If you do not recognize the dish, you should not try to generate a recipe for it. Do not answer a recipe if you do not understand the name of the dish. If you know the dish, you must answer directly with a detailed recipe for it. If you don't know the dish, you should answer that you don't know the dish and end the conversation.",
+        "content": "Your client is going to provide either the name of a dish, the name of an ingredient, or a full recipe. If they provide input that is not a recognizable dish name, ingredient, or a recipe, you should reply that you can't help with that. Do not answer a recipe if you do not understand the name of the dish. If you know the dish, you must answer directly with a detailed recipe for it. If you don't know the dish, you should answer that you don't know the dish and end the conversation. If they provide an ingredient, you should answer with recipe suggestions to use that ingredient. If they provide a recipe, you should suggest improvements to make the recipe more interesting.",
     }
 )
 
@@ -21,7 +21,7 @@ dish = input("Type the name of the dish you want a recipe for:\n")
 messages.append(
     {
         "role": "user",
-        "content": f"Suggest me a detailed recipe and the preparation steps for making {dish}",
+        "content": f"Suggest me a detailed recipe and the preparation steps for making {dish}.",
     }
 )
 
