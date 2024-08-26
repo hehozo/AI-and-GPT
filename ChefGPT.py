@@ -39,7 +39,7 @@ recipe = input("Provide the recipe you'd like feedback on:\n")
 messages.append(
     {
         "role": "user",
-        "content": f"Provide a suggestion to make the given {recipe} more interesting.",
+        "content": f"Provide a suggestion to make the given recipe more interesting: {recipe}",
     }
 )
 
